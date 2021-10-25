@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Contract tests" parallel="tests">
+    <method-selectors>
+        <method-selector>
+            <selector-class name="helpers.listeners.CustomMethodSelector"/>
+        </method-selector>
+    </method-selectors>
+    <test name="Проверки контрактов" parallel="methods" thread-count="5">
+        <packages>
+            <package name="tests.contract"/>
+        </packages>
+    </test>
+</suite>

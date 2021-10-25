@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All tests" parallel="tests">
+    <method-selectors>
+        <method-selector>
+            <selector-class name="helpers.listeners.CustomMethodSelector"/>
+        </method-selector>
+    </method-selectors>
+    <test name="Все тесты" parallel="methods" thread-count="5">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+</suite>

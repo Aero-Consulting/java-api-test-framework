@@ -1,0 +1,58 @@
+name: Api tests
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  contents: write
+  pages: write
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    environment:
+      name: link
+      url: https://aero-consulting.github.io/java-api-test-framework/${{ github.run_number }}
+    steps:
+    
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        with:
+          gradle-version: 7.5
+      - run: gradle test
+
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report action
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: build/allure-results
+          allure_history: allure-history
+          keep_reports: 20
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history

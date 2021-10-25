@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "data",
+    "support"
+  ],
+  "properties": {
+    "data": {
+      "id": "#/properties/data",
+      "type": "object",
+      "title": "The data schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": [
+        "id",
+        "email",
+        "first_name",
+        "last_name",
+        "avatar"
+      ],
+      "properties": {
+        "id": {
+          "id": "#/properties/data/properties/id",
+          "type": "integer",
+          "title": "The id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0
+        },
+        "email": {
+          "id": "#/properties/data/properties/email",
+          "type": "string",
+          "title": "The email schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "first_name": {
+          "id": "#/properties/data/properties/first_name",
+          "type": "string",
+          "title": "The first_name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "last_name": {
+          "id": "#/properties/data/properties/last_name",
+          "type": "string",
+          "title": "The last_name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "avatar": {
+          "id": "#/properties/data/properties/avatar",
+          "type": "string",
+          "title": "The avatar schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        }
+      },
+      "additionalProperties": true
+    },
+    "support": {
+      "id": "#/properties/support",
+      "type": "object",
+      "title": "The support schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": [
+        "url",
+        "text"
+      ],
+      "properties": {
+        "url": {
+          "id": "#/properties/support/properties/url",
+          "type": "string",
+          "title": "The url schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "text": {
+          "id": "#/properties/support/properties/text",
+          "type": "string",
+          "title": "The text schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

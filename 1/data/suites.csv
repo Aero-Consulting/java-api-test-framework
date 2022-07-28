@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jul 28 13:57:35 GMT 2022","Thu Jul 28 13:57:40 GMT 2022","4376","All tests","Все тесты","tests.integration.ReqResIntegrationTest","tests.integration.ReqResIntegrationTest","createAndDeleteUser","Создание и удаление пользователя",""
+"passed","Thu Jul 28 13:57:35 GMT 2022","Thu Jul 28 13:57:39 GMT 2022","3676","All tests","Все тесты","tests.contract.ReqResContractTest","tests.contract.ReqResContractTest","checkGetListUsers","Проверка контракта получения списка пользователей",""
+"passed","Thu Jul 28 13:57:35 GMT 2022","Thu Jul 28 13:57:39 GMT 2022","3632","All tests","Все тесты","tests.contract.ReqResContractTest","tests.contract.ReqResContractTest","checkGetSingleUser","Проверка контракта получения пользователя",""
+"passed","Thu Jul 28 13:57:35 GMT 2022","Thu Jul 28 13:57:39 GMT 2022","4131","All tests","Все тесты","tests.integration.ReqResIntegrationTest","tests.integration.ReqResIntegrationTest","registerAndLogin","Регистраци и логин",""
+"passed","Thu Jul 28 13:57:35 GMT 2022","Thu Jul 28 13:57:39 GMT 2022","3776","All tests","Все тесты","tests.integration.ReqResIntegrationTest","tests.integration.ReqResIntegrationTest","loginWithoutPassword","Попытка входа без пароля",""

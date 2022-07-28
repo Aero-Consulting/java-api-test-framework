@@ -22,7 +22,7 @@ repositories {
 
 // dependency versions
 def lombokVersion = "1.18.18"
-def allureVersion = "2.15.0"
+def allureVersion = "2.18.1"
 def testngVersion = "7.4.0"
 def restAssuredVersion = "4.4.0"
 

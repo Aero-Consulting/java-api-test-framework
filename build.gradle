@@ -24,7 +24,7 @@ repositories {
 def lombokVersion = "1.18.24"
 def allureVersion = "2.19.0"
 def testngVersion = "7.6.1"
-def restAssuredVersion = "5.1.1"
+def restAssuredVersion = "5.2.0"
 
 dependencies {
     testImplementation "org.projectlombok:lombok:$lombokVersion"
